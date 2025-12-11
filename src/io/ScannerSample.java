@@ -7,17 +7,17 @@ public class ScannerSample {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Please enter an integer >> ");
-        int i_num = scanner.nextInt();
+        int intNumber = scanner.nextInt();
 
         System.out.print("Please enter a real number >> ");
-        double d_num = scanner.nextDouble();
+        double doubleNumber = scanner.nextDouble();
 
         System.out.print("Please enter a word >> ");
-        String str = scanner.next();
+        String word = scanner.next();
 
-        System.out.println("i_num = " + i_num);
-        System.out.println("d_num = " + d_num);
-        System.out.println("str = " + str);
+        System.out.println("intNumber = " + intNumber);
+        System.out.println("doubleNumber = " + doubleNumber);
+        System.out.println("word = " + word);
 
         scanner.close();
     }

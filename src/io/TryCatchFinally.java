@@ -6,18 +6,18 @@ import java.io.InputStreamReader;
 
 public class TryCatchFinally {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in)); 
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in)); 
 
         try {
             System.out.print("Input an integer >> ");
-            String str = reader.readLine();
-            int num = Integer.parseInt(str);
+            String intInput = bufferedReader.readLine();
+            int intNumber = Integer.parseInt(intInput);
 
-            System.out.println("num = " + num);
+            System.out.println("intNumber = " + intNumber);
         } catch (NumberFormatException e) {
             System.out.println("The input must be an integer.");
         } finally {
-            reader.close();
+            bufferedReader.close();
         }
     }
 }

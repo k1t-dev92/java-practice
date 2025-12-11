@@ -6,21 +6,21 @@ import java.io.InputStreamReader;
 
 public class BufferedReaderSample {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Please enter an integer >> ");
-        String i_str = reader.readLine();
-        int i_num = Integer.parseInt(i_str);
+        String intInput = bufferedReader.readLine();
+        int intNumber = Integer.parseInt(intInput);
 
         System.out.print("Please enter a real number >> ");
-        String d_str = reader.readLine();
-        double d_num = Double.parseDouble(d_str);
+        String doubleInput = bufferedReader.readLine();
+        double doubleNumber = Double.parseDouble(doubleInput);
 
         System.out.print("Please enter a word >> ");
-        String str = reader.readLine();
+        String word = bufferedReader.readLine();
 
-        System.out.println("i_num = " + i_num);
-        System.out.println("d_num = " + d_num);
-        System.out.println("str = " + str);
+        System.out.println("intNumber = " + intNumber);
+        System.out.println("doubleNumber = " + doubleNumber);
+        System.out.println("word = " + word);
     }
 }
