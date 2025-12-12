@@ -2,21 +2,21 @@ package objectoriented;
 
 public class OrderSystem {
     public static void main(String[] args) {
-        Menu currymenu = new Menu();
-        Menu saladmenu = new Menu();
-        Menu gratinmenu = new Menu();
+        Menu currymenu = new Menu("curry", 200);
+        Menu saladmenu = new Menu("salad", 300);
+        Menu gratinmenu = new Menu("gratin", 950);
 
-        currymenu.name = "curry";
-        currymenu.price = 200;
+        int curryTotal = 1;
+        int currySum = currymenu.getPrice(curryTotal);
 
-        saladmenu.name = "salad";
-        saladmenu.price = 300;
+        int saladTotal = 2;
+        int saladSum = saladmenu.getPrice(saladTotal);
 
-        gratinmenu.name = "gratin";
-        gratinmenu.price = 950;
+        int gratinTotal = 3;
+        int gratinSum = gratinmenu.getPrice(gratinTotal);
 
-        System.out.println(currymenu.name + ": " + currymenu.price + " yen");
-        System.out.println(saladmenu.name + ": " + saladmenu.price + " yen");
-        System.out.println(gratinmenu.name + ": " + gratinmenu.price + " yen");
+        System.out.println(currymenu.getName() + ": " + currySum + " yen");
+        System.out.println(saladmenu.getName() + ": " + saladSum + " yen");
+        System.out.println(gratinmenu.getName() + ": " + gratinSum + " yen");
     }
 }
