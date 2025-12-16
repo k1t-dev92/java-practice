@@ -4,21 +4,19 @@ import java.util.Scanner;
 
 public class ScannerSample {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Please enter an integer >> ");
+            int userInput1 = scanner.nextInt();
 
-        System.out.print("Please enter an integer >> ");
-        int intNumber = scanner.nextInt();
+            System.out.print("Please enter a real number >> ");
+            double userInput2 = scanner.nextDouble();
 
-        System.out.print("Please enter a real number >> ");
-        double doubleNumber = scanner.nextDouble();
+            System.out.print("Please enter a userInput3 >> ");
+            String userInput3 = scanner.next();
 
-        System.out.print("Please enter a word >> ");
-        String word = scanner.next();
-
-        System.out.println("intNumber = " + intNumber);
-        System.out.println("doubleNumber = " + doubleNumber);
-        System.out.println("word = " + word);
-
-        scanner.close();
+            System.out.println("userInput1 = " + userInput1);
+            System.out.println("userInput2 = " + userInput2);
+            System.out.println("userInput3 = " + userInput3);
+        }
     }
 }
