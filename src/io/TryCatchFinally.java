@@ -10,10 +10,10 @@ public class TryCatchFinally {
 
         try {
             System.out.print("Input an integer >> ");
-            String intInput = bufferedReader.readLine();
-            int intNumber = Integer.parseInt(intInput);
+            String inputText = bufferedReader.readLine();
+            int inputNumber = Integer.parseInt(inputText);
 
-            System.out.println("intNumber = " + intNumber);
+            System.out.println("inputNumber = " + inputNumber);
         } catch (NumberFormatException e) {
             System.out.println("The input must be an integer.");
         } finally {
