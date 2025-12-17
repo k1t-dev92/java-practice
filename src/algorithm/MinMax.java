@@ -4,29 +4,28 @@ import java.util.Scanner;
 
 public class MinMax {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
 
-        int elementCount = scanner.nextInt();
+            int elementCount = scanner.nextInt();
 
-        int[] numbers = new int[elementCount];
-        for (int i = 0; i < elementCount; i++) {
-            numbers[i] = scanner.nextInt();
-        }
-
-        int min = numbers[0];
-        int max = numbers[0];
-        for (int i = 1; i < elementCount; i++) {
-            if (min > numbers[i]) {
-                min = numbers[i];
+            int[] numbers = new int[elementCount];
+            for (int i = 0; i < elementCount; i++) {
+                numbers[i] = scanner.nextInt();
             }
-            if (max < numbers[i]) {
-                max = numbers[i];
+
+            int min = numbers[0];
+            int max = numbers[0];
+            for (int i = 1; i < elementCount; i++) {
+                if (min > numbers[i]) {
+                    min = numbers[i];
+                }
+                if (max < numbers[i]) {
+                    max = numbers[i];
+                }
             }
+
+            System.out.println("min = " + min);
+            System.out.println("max = " + max);
         }
-
-        System.out.println("min = " + min);
-        System.out.println("max = " + max);
-
-        scanner.close();
     }
 }
