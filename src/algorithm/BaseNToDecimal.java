@@ -11,7 +11,7 @@ public class BaseNToDecimal {
             System.out.print("Enter an base >> ");
             int base = scanner.nextInt();
 
-            System.out.print(number + "(" + base + ")");
+            System.out.print(number + "(" + base + ") = ");
 
             int decimal = 0;
             int power = 1;
