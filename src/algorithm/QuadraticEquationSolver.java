@@ -18,17 +18,16 @@ public class QuadraticEquationSolver {
             if (discriminant > 0) {
                 double x1 = (-b + Math.sqrt(discriminant)) / (2.0 * a);
                 double x2 = (-b - Math.sqrt(discriminant)) / (2.0 * a);
-                System.out.println("x1 = " + x1 + ", x2 = " + x2);
+                System.out.printf("x1 = %.2f, x2 = %.2f%n", x1, x2);
 
             } else if (discriminant == 0) {
                 double x1 = -b / (2.0 * a);
-                System.out.println("x1 = " + x1 + " (double root)");
+                System.out.printf("x1 = %.2f (double root)%n", x1);
 
             } else {
                 double realPart = (-b) / (2.0 * a);
                 double imaginaryPart = Math.sqrt(-discriminant) / (2.0 * a);
-
-                System.out.printf("x1 = %.6f%+.6fi, x2 = %.6f%+.6fi%n", realPart, imaginaryPart, realPart, -imaginaryPart);
+                System.out.printf("x1 = %.2f%+.2fi, x2 = %.2f%+.2fi%n", realPart, imaginaryPart, realPart, -imaginaryPart);
             }
         }
     }
