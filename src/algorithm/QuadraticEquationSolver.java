@@ -6,8 +6,14 @@ public class QuadraticEquationSolver {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
 
-            System.out.print("a = ");
+            System.out.print("a(≠0) =");
             int a = scanner.nextInt();
+
+            if (a == 0) {
+                System.out.println("a must be non-zero.");
+                return;
+            }
+            
             System.out.print("b = ");
             int b = scanner.nextInt();
             System.out.print("c = ");
