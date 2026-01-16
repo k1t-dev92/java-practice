@@ -16,6 +16,7 @@ public class CharHistgram {
                 char c = word.charAt(i);
 
                 if (c < 'a' || c > 'z') {
+                    System.out.println();
                     return;
                 } else {
                     int index = c - 'a';
