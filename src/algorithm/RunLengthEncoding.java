@@ -14,6 +14,13 @@ public class RunLengthEncoding {
                 return;
             }
 
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                if (c < 'a' || c > 'z') {
+                    return;
+                }
+            }
+
             char currentChar = word.charAt(0);
             int runLength = 1;
             for (int i = 1; i < word.length(); i++) {
