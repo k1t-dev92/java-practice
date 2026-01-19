@@ -14,6 +14,10 @@ public class DecimalToBaseN {
             int decimal = scanner.nextInt();
             System.out.print("Enter an base >> ");
             int base = scanner.nextInt();
+            if (base < 2 || base > 16) {
+                return;
+            }
+
             System.out.print(decimal + "(" + DECIMAL + ") = ");
 
             int i = 0;
